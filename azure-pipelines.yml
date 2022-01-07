@@ -8,16 +8,16 @@ stages :
         displayName: 'install'
         inputs:
           terraformVersion: '0.12.3'
-      - task: TerraformTaskV1@0
-        displayName: 'init'
-        inputs:
-          provider: 'azurerm'
-          command: 'init'
-          backendServiceArm: 'tamopstfspn'
-          backendAzureRmResourceGroupName: 'tamopstf'
-          backendAzureRmStorageAccountName: 'tamops1tf'
-          backendAzureRmContainerName: 'tfstatedevops'
-          backendAzureRmKey: 'terraform.tfstate'
+      # - task: TerraformTaskV1@0
+      #   displayName: 'init'
+      #   inputs:
+      #     provider: 'azurerm'
+      #     command: 'init'
+      #     backendServiceArm: 'tamopstfspn'
+      #     backendAzureRmResourceGroupName: 'tamopstf'
+      #     backendAzureRmStorageAccountName: 'tamops1tf'
+      #     backendAzureRmContainerName: 'tfstatedevops'
+      #     backendAzureRmKey: 'terraform.tfstate'
       - task: TerraformTaskV1@0
         displayName: 'validate'
         inputs:
